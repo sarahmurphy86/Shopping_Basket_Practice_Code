@@ -28,12 +28,31 @@ public class ShoppingBasket {
     }
 
 
+//    public double totalCostOfItems() {
+//        double total = 0;
+//
+//        for (Item item : this.items){
+//            total += item.getSellingPrice();
+//        }
+//            return total;
+//    }
+
+//    Apply a ten percent discount
+//
     public double totalCostOfItems() {
         double total = 0;
 
         for (Item item : this.items){
             total += item.getSellingPrice();
         }
-            return total;
+
+            if (total<= 20){
+
+                return total;
+            }
+
+         else return total - (total/10);
+
     }
 }
+

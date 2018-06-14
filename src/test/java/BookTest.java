@@ -29,6 +29,9 @@ public class BookTest {
         assertEquals("Margaret Atwood", book.getAuthor());
     }
 
+    @Test
+    public void can
+
     //Buy one Get one Free:
 //  Apply buy one get one free on books - I think I want to have this in a discount class or interface?
 //  Loop through the shopping basket and add books into a new book array

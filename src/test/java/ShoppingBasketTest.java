@@ -16,7 +16,7 @@ public class ShoppingBasketTest {
     public void before(){
         shoppingBasket = new ShoppingBasket();
         book1 = new Book (15.00, "The Handsmaid Tale", "Margaret Atwood");
-        book2 = new Book (15.00, "Planet Earth", "David Attenborough");
+        book2 = new Book (4.00, "Planet Earth", "David Attenborough");
     }
 
     @Test
@@ -50,7 +50,13 @@ public class ShoppingBasketTest {
     public void canCalculateCostOfAllItemsInShoppingBasket(){
         shoppingBasket.addItem(book1);
         shoppingBasket.addItem(book2);
-        shoppingBasket.addItem(book2);
-        assertEquals(45.00, shoppingBasket.totalCostOfItems(), 0);
+        assertEquals(19.00, shoppingBasket.totalCostOfItems(), 0);
+    }
+
+    @Test
+    public void canAddTenPercentDiscount(){
+        shoppingBasket.addItem(book1);
+        shoppingBasket.addItem(book1);
+        assertEquals(27, shoppingBasket.totalCostOfItems(),0 );
     }
 }

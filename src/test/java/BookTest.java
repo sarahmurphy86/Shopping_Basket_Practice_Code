@@ -28,4 +28,9 @@ public class BookTest {
     public void canGetAuthor(){
         assertEquals("Margaret Atwood", book.getAuthor());
     }
+
+    //Buy one Get one Free:
+//  Apply buy one get one free on books - I think I want to have this in a discount class or interface?
+//  Loop through the shopping basket and add books into a new book array
+//  Count the new book array - if it is a even number apply a 50% discount  ie n%2==0
 }
